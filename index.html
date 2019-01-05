@@ -3,49 +3,54 @@
 
 <head>
 
-  <meta charset="utf-8">
-  <title>Stuff</title>
-  <style type="text/css">
-    button,
-    div,
-    form,
-    input {
-      margin: 10px;
-    }
+    <meta charset="utf-8">
+    <title>Stuff</title>
+    <style type="text/css">
+        button,
+        div,
+        form,
+        input {
+            margin: 10px;
+        }
 
-    img {
-      margin: 5px;
-      position: relative;
-    }
+        img {
+            margin: 5px;
+            position: relative;
+        }
 
-    button {
-      margin: 3px !important;
-    }
-  </style>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous">
+        button {
+            margin: 3px !important;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
 </head>
 
 <body>
+    <center>
 
-  <div class="container">
-    <h1>Stuff Search</h1>
+        <div class="container">
+            <h1>Stuff Search</h1>
 
-    <div id="buttons-view"></div>
+            <div id="buttons-view"></div>
+            <hr>
+            <h1>Your Favorites</h1>
+            <div id="user-favorites"></div>
 
-    <form id="stuff-form">
-      <label for="stuff-input">Add More Stuff</label>
-      <input type="text" id="stuff-input">
-      <br>
+            <form id="stuff-form">
+                <label for="stuff-input">Add More Stuff</label>
+                <input type="text" id="stuff-input">
+                <br>
 
-      <input id="add-stuff" type="submit" value="Add More Stuff">
-    </form>
+                <input id="add-stuff" type="submit" value="Add More Stuff">
+            </form>
 
-    <div id="stuff-view" class="column"></div>
-  </div>
+            <div id="stuff-view" class="column"></div>
+        </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="javascript.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="javascript.js"></script>
+    </center>
 </body>
 
 </html>
