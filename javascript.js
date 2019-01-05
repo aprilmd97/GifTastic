@@ -1,4 +1,4 @@
-var things = ["pizza", "candy", "butterfly", "jam", "toes", "grimes"];
+var things = ["bubblegum", "rainbow", "headphones", "hot sauce", "pink floyd", "used tissue"];
 
 function renderButtons() {
     $("#buttons-view").empty();
@@ -46,9 +46,13 @@ function displayStuff() {
             var images = $("<img>");
             var ratings = $("<p>");
             var imageTitle = $("<p>");
+            var downloadLink = $("<a>");
 
-            ratings.text("rating: " + rate);
-            imageTitle.text("title: " + title);
+
+            ratings.text("Rating: " + rate);
+            imageTitle.text("Title: " + title);
+            downloadLink.html("<button>");
+            downloadLink.text("download gif");
 
             images.attr("src", imageURLStill);
             images.attr("alt", 'image');
@@ -57,10 +61,13 @@ function displayStuff() {
             images.addClass('image');
             images.attr("data-still", imageURLStill);
             images.attr("data-animate", imageURL);
-
-
+            downloadLink.attr("href", imageURL);
+            downloadLink.html("<button href='imageURL'>Download Gif</button>");
+            downloadLink.attr("download", "giphy.gif");
+          
 
             $("#stuff-view").prepend(ratings);
+            $("#stuff-view").prepend(downloadLink);
             $("#stuff-view").prepend(imageTitle);
             $("#stuff-view").prepend(images);
 
@@ -81,8 +88,8 @@ $(document).on("mouseover", "img", function () {
 
 
 
-
 displayStuff();
+
 
 $("#add-stuff").on("click", function (event) {
     event.preventDefault();
