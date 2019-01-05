@@ -64,15 +64,25 @@ function displayStuff() {
             downloadLink.attr("href", imageURL);
             downloadLink.html("<button href='imageURL'>Download Gif</button>");
             downloadLink.attr("download", "giphy.gif");
+
+            theStuff();
+            $("#stuff-view").prepend(images);
           
 
-            $("#stuff-view").prepend(ratings);
-            $("#stuff-view").prepend(downloadLink);
-            $("#stuff-view").prepend(imageTitle);
-            $("#stuff-view").prepend(images);
+            function theStuff() {
+                $("#stuff-view").prepend(ratings);
+                $("#stuff-view").prepend(downloadLink);
+                $("#stuff-view").prepend(imageTitle);
 
+            }
 
         }
+
+        $(document).on("click", "img", function () {
+            $(this).toggle(3000);
+            theStuff().remove();
+        });
+
     });
 };
 
@@ -85,6 +95,8 @@ $(document).on("mouseleave", "img", function () {
 $(document).on("mouseover", "img", function () {
     $(this).attr("src", $(this).attr("data-animate"));
 });
+
+
 
 
 
